@@ -1,0 +1,10 @@
+{
+  "description": "This interactive donation platform enables users to contribute to Street Hearts Bulgaria, featuring a meticulously designed interface for seamless giving.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
