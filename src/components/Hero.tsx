@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react"
 import { useCheckout } from "../checkout"
 import svgPaths from "../imports/CorporatePenSponsorshipRedesign/svg-2r9d6mgr6q"
-import imgWhoYouHelp from "../imports/image.png"
 import imgRectangle13 from "../imports/CorporatePenSponsorshipRedesign/b82a77daba3a5ed53e251afbff1552663a0d8f60.png"
 import imgRectangle14 from "../imports/CorporatePenSponsorshipRedesign/64b83c84bd53a44194a0ee822a5bb6a3cf201dd7.png"
 import imgRectangle15 from "../imports/CorporatePenSponsorshipRedesign/509269edea1e9a2122755a27059ddfd3467a74a0.png"
 import imgHarley3 from "../imports/Harley3.jpg"
+import whoYouHelpArrow from "../imports/Hero/who-you-help-arrow.svg"
 
 const PRESETS = [5, 25, 50]
 
@@ -80,25 +80,24 @@ function Frame5() {
 function Frame3() {
   return (
     <div
-      className="border border-[#95b996] border-solid content-stretch flex gap-[20px] h-[52px] items-center overflow-clip px-[14px] py-[10px] relative rounded-[5px] shrink-0"
+      className="border border-[#95b996] border-solid content-stretch flex flex-nowrap gap-[10px] sm:gap-[20px] h-[52px] items-center justify-between sm:justify-start overflow-clip px-[12px] sm:px-[14px] py-[10px] relative rounded-[5px] shrink-0 w-full sm:w-auto"
       data-name="Frame"
     >
       <Frame4 />
-      <div className="bg-[#95b996] h-full relative shrink-0 w-px" />
+      <div className="hidden sm:block bg-[#95b996] h-full relative shrink-0 w-px" />
       <Frame5 />
     </div>
   )
 }
 
-function HelpUs() {
+function HelpUsArrow({ className = "" }: { className?: string }) {
   return (
-    <div className="-mt-[16px] relative shrink-0" data-name="Help Us">
-      <img
-        src={imgWhoYouHelp}
-        alt="Who you help"
-        className="block h-auto w-[215px] max-w-none"
-      />
-    </div>
+    <img
+      src={whoYouHelpArrow}
+      alt="Who you help"
+      className={`block h-auto max-w-none pointer-events-none ${className}`}
+      data-name="Help Us"
+    />
   )
 }
 
@@ -108,16 +107,18 @@ function HeroContent() {
       className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px relative"
       data-name="Hero content"
     >
-      <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[1.25] not-italic relative shrink-0 text-[#f3f7f3] text-[32px] md:text-[38px] tracking-[2px] uppercase w-full">
+      <p className="[word-break:break-word] [text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[1.25] not-italic relative shrink-0 text-[#f3f7f3] text-[32px] md:text-[38px] tracking-[2px] uppercase w-full">
         Every donation helps save a life
       </p>
-      <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#f3f7f3] text-[16px] tracking-[1.5px] w-full">
+      <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#f3f7f3] text-[14px] sm:text-[16px] tracking-[1.5px] w-full">
         Street Hearts Bulgaria has been treating, neutering and finding homes
         for stray dogs. Your donation, large or small, directly supports
         veterinary care, food and shelter.
       </p>
       <Frame3 />
-      <HelpUs />
+      {/* desktop: sits under the badges, 30px below (24px flex gap + 6px).
+          On mobile it is rendered after the donation form instead. */}
+      <HelpUsArrow className="hidden lg:block mt-[6px] w-[210px]" />
     </div>
   )
 }
@@ -134,6 +135,15 @@ const CAROUSEL_CARDS = [
   { name: "Mason", img: imgRectangle15 },
   { name: "Isabella", img: imgRectangle14 },
 ]
+
+/**
+ * One marquee "group" must be at least as wide as the widest viewport, otherwise
+ * an empty gap shows at the right edge just before the loop restarts. Repeating
+ * the base list 3× (~4800px per group) covers any realistic screen. The track
+ * renders this group twice and the CSS animates translateX 0 → -50% (exactly one
+ * group), so group #2 lands pixel-identical to group #1 → seamless, no pause.
+ */
+const MARQUEE_CARDS = [...CAROUSEL_CARDS, ...CAROUSEL_CARDS, ...CAROUSEL_CARDS]
 
 function DogCard({
   name,
@@ -171,9 +181,9 @@ function CarouselGroup() {
       className="flex gap-[30px] items-center pr-[30px] shrink-0"
       aria-hidden
     >
-      {CAROUSEL_CARDS.map((c, i) => (
+      {MARQUEE_CARDS.map((c, i) => (
         <DogCard
-          key={c.name}
+          key={i}
           name={c.name}
           img={c.img}
           tilt={i % 2 === 0 ? 3 : -3}
@@ -207,59 +217,30 @@ function HeroCarousel() {
 
 function Frame6() {
   return (
-    <div className="content-stretch flex items-start relative shrink-0">
-      <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.3] relative shrink-0 text-[#555] text-[12px] text-center tracking-[1.5px] w-full max-w-[335.988px] whitespace-pre-wrap">{`    Payment is processed securely via PayPal. No PayPal account required to pay by card.`}</p>
-      <div
-        className="absolute left-0 overflow-clip size-[16px] top-0"
-        data-name="Shield"
+    <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.4] relative shrink-0 text-[#555] text-[12px] text-center tracking-[1.5px] w-full max-w-[336px]">
+      <svg
+        aria-hidden
+        className="inline-block align-[-2px] mr-[5px] size-[13px] shrink-0"
+        viewBox="0 0 16 16"
+        fill="none"
       >
-        <div className="absolute inset-[8.33%_16.67%]" data-name="Icon">
-          <div className="absolute inset-[-6%_-7.5%]">
-            <svg
-              className="block size-full"
-              fill="none"
-              height="14.9333"
-              preserveAspectRatio="none"
-              viewBox="0 0 12.2667 14.9333"
-              width="12.2667"
-            >
-              <path
-                d={svgPaths.p26f63400}
-                id="Icon"
-                stroke="#5A8B5C"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.6"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          className="-translate-x-1/2 -translate-y-1/2 absolute h-[3.543px] left-1/2 top-1/2 w-[5.191px]"
-          data-name="Icon"
-        >
-          <div className="absolute inset-[-22.58%_-15.41%]">
-            <svg
-              className="block size-full"
-              fill="none"
-              height="5.1435"
-              preserveAspectRatio="none"
-              viewBox="0 0 6.79067 5.1435"
-              width="6.79067"
-            >
-              <path
-                d={svgPaths.p2a6e2c20}
-                id="Icon"
-                stroke="#5A8B5C"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.6"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
+        <path
+          d="M8 1.6 3 3.4v4.1c0 3 2 5.2 5 6.3 3-1.1 5-3.3 5-6.3V3.4L8 1.6Z"
+          stroke="#5A8B5C"
+          strokeWidth="1.4"
+          strokeLinejoin="round"
+        />
+        <path
+          d="m5.7 8 1.6 1.6L10.4 6.3"
+          stroke="#5A8B5C"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      Payment is processed securely via PayPal. No PayPal account required to pay
+      by card.
+    </p>
   )
 }
 
@@ -294,8 +275,8 @@ function Frame15() {
   }
 
   return (
-    <div className="bg-[#eaf1ea] content-stretch flex flex-col gap-[24px] items-center p-6 sm:p-[40px] rounded-[7px] w-full max-w-[520px] lg:max-w-none">
-      <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[37px] min-w-full not-italic relative shrink-0 text-[28px] text-black text-center tracking-[2.5px] uppercase w-[min-content]">
+    <div className="bg-[#eaf1ea] content-stretch flex flex-col gap-[14px] items-center p-6 sm:p-[40px] rounded-[7px] w-full max-w-[520px] lg:max-w-none">
+      <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[37px] mb-[4px] min-w-full not-italic relative shrink-0 text-[28px] text-black text-center tracking-[2.5px] uppercase w-[min-content]">
         Donate now
       </p>
       <div
@@ -340,7 +321,7 @@ function Frame15() {
       </div>
       <div
         className={`grid transition-all duration-300 ease-out w-full ${
-          isOther ? "mb-0" : "-mb-[24px]"
+          isOther ? "mb-0" : "-mb-[14px]"
         }`}
         style={{
           gridTemplateRows: isOther ? "1fr" : "0fr",
@@ -442,11 +423,17 @@ function Frame15() {
 export default function Hero() {
   return (
     <div className="bg-[#5a8b5c] relative shrink-0 w-full" data-name="Hero">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-[48px] px-6 pt-[40px] pb-[48px] md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-16">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-6 pt-[40px] pb-[48px] md:px-12 lg:flex-row lg:items-center lg:gap-16 lg:px-16">
         <HeroContent />
         <div className="flex w-full min-w-px justify-center lg:flex-[1_0_0] lg:justify-end">
           <Frame15 />
         </div>
+        {/* mobile/tablet only: the "WHO YOU HELP" arrow sits after the donation
+            form, pointing down toward the dog-photo carousel. On desktop it is
+            rendered inside HeroContent under the badges instead.
+            Gap to the form card = exactly 30px: the flex container's gap-5 (20px)
+            + mt-[10px]. Same pattern as the desktop 30px (gap-[24px] + mt-[6px]). */}
+        <HelpUsArrow className="lg:hidden self-center mt-[10px] w-[180px]" />
       </div>
       <HeroCarousel />
     </div>

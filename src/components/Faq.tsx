@@ -27,13 +27,13 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center justify-between w-full px-[20px] py-[16px] text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#5a8b5c] focus-visible:ring-inset"
+        className="flex items-start justify-between gap-[16px] w-full px-[20px] py-[16px] text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#5a8b5c] focus-visible:ring-inset"
       >
-        <span className="leading-[1.5] relative shrink-0 text-[14px] tracking-[1px]">
+        <span className="flex-1 min-w-0 leading-[1.5] relative text-[14px] tracking-[1px]">
           {q}
         </span>
         <span
-          className={`leading-[normal] relative shrink-0 text-[20px] transition-transform duration-300 ${
+          className={`leading-[1.5] relative shrink-0 text-[20px] transition-transform duration-300 ${
             open ? "rotate-45" : ""
           }`}
         >
@@ -70,7 +70,7 @@ export default function Faq() {
       className="[word-break:break-word] bg-[#f3f7f3] content-stretch flex flex-col gap-[40px] items-center overflow-clip px-6 md:px-16 py-16 md:py-20 relative shrink-0 w-full"
       data-name="FAQ"
     >
-      <p className="font-['Neucha:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[28px] text-black text-center tracking-[2.5px] uppercase">
+      <p className="[text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[28px] text-black text-center tracking-[2.5px] uppercase">
         FREQUENTLY ASKED QUESTIONS
       </p>
       <Frame47 />

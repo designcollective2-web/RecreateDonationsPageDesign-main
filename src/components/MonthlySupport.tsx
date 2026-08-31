@@ -7,7 +7,7 @@ import imgStory3 from "../imports/WhatYourSponsorshipFunds/f0c4baefe8f6c3152a48b
 function Frame28() {
   return (
     <div className="[word-break:break-word] content-stretch flex flex-col gap-[18px] items-start justify-center relative shrink-0 w-full">
-      <p className="font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-black tracking-[2.5px] uppercase w-full">
+      <p className="[text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-black tracking-[2.5px] uppercase w-full">
         Become part of our ongoing support
       </p>
       <p className="font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#333] text-[16px] tracking-[1.5px] w-full">
@@ -145,22 +145,17 @@ function StoryCard({
   img: string
 }) {
   return (
-    <div className="bg-white content-stretch flex gap-[20px] items-center p-[20px] relative rounded-[7px] shadow-sm shrink-0 w-full">
-      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-w-px relative">
-        <div
-          className="bg-[#5a8b5c] content-stretch flex items-center px-[20px] py-[5px] relative rounded-[57px] shrink-0"
-          data-name="Button"
-        >
-          <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[14px] text-center text-white tracking-[1px] whitespace-nowrap">
-            {badge}
-          </p>
-        </div>
-        <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#333] text-[16px] tracking-[1.5px] w-full">
-          {text}
+    <div className="bg-white content-stretch flex flex-col items-center gap-[12px] p-[20px] relative rounded-[7px] shadow-sm shrink-0 w-full text-center sm:grid sm:grid-cols-[minmax(0,1fr)_134px] sm:items-center sm:gap-x-[20px] sm:gap-y-[12px] sm:text-left">
+      <div
+        className="order-1 sm:order-none sm:col-start-1 sm:row-start-1 sm:justify-self-start bg-[#5a8b5c] content-stretch flex items-center px-[20px] py-[5px] relative rounded-[57px] shrink-0"
+        data-name="Button"
+      >
+        <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[14px] text-center text-white tracking-[1px] whitespace-nowrap">
+          {badge}
         </p>
       </div>
       <div
-        className="h-[90px] overflow-hidden relative rounded-[7px] shrink-0 w-[134px]"
+        className="order-2 sm:order-none sm:col-start-2 sm:row-start-1 sm:row-span-2 sm:self-center h-[170px] w-full sm:h-[90px] sm:w-[134px] overflow-hidden relative rounded-[7px] shrink-0"
         data-name="story image"
       >
         <img
@@ -169,6 +164,9 @@ function StoryCard({
           src={img}
         />
       </div>
+      <p className="order-3 sm:order-none sm:col-start-1 sm:row-start-2 [word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#333] text-[16px] tracking-[1.5px] w-full">
+        {text}
+      </p>
     </div>
   )
 }
@@ -179,8 +177,8 @@ function SponsorStory() {
       className="relative shrink-0 w-full lg:flex-[1_0_0] lg:min-w-px lg:max-w-[648px]"
       data-name="placeholder"
     >
-      <div className="border-2 border-[#d6e4d5] border-solid content-stretch flex flex-col gap-[16px] items-center px-[24px] pt-[84px] sm:pt-[64px] pb-[40px] relative rounded-[12px] w-full">
-        <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[36px] not-italic relative shrink-0 text-[#6c986e] text-[24px] text-center tracking-[2px] uppercase">
+      <div className="border-2 border-[#d6e4d5] border-solid content-stretch flex flex-col gap-[16px] items-center px-4 sm:px-[24px] pt-[42px] sm:pt-[64px] pb-[40px] relative rounded-[12px] w-full">
+        <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[36px] not-italic relative shrink-0 text-[#6c986e] text-[24px] text-center tracking-[2px] uppercase whitespace-nowrap">
           Little Miss Story
         </p>
         <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
@@ -201,8 +199,8 @@ function SponsorStory() {
           />
         </div>
       </div>
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eaf1ea] left-1/2 px-[12px] top-0 w-[90%] max-w-[440px]">
-        <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[1.35] not-italic relative text-[#333] text-[20px] md:text-[28px] text-center tracking-[1.5px]">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#eaf1ea] left-1/2 px-[12px] top-0 w-max max-w-[calc(100vw-24px)]">
+        <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[1.35] not-italic relative text-[#333] text-[15px] sm:text-[20px] md:text-[28px] text-center tracking-[0.5px] sm:tracking-[1.5px] whitespace-nowrap">
           Made possible by our monthly sponsors
         </p>
       </div>

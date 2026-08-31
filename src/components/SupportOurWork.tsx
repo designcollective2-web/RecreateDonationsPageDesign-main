@@ -6,7 +6,7 @@ import { Reveal } from "./motion"
 function Frame39() {
   return (
     <div className="content-stretch flex flex-col gap-[26px] items-center justify-center relative shrink-0 w-full">
-      <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-black text-center tracking-[2.5px] uppercase">
+      <p className="[word-break:break-word] [text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-black text-center tracking-[2.5px] uppercase">
         Support our work your way
       </p>
       <div
@@ -41,9 +41,11 @@ function Slide1() {
       className="-translate-x-1/2 -translate-y-1/2 absolute h-[239px] left-1/2 top-1/2 w-[173px]"
       data-name="Slide 16:9 - 2"
     >
+      {/* object-contain so the whole photo is visible; the empty space left and
+          right is filled by the parent panel's brand-red background */}
       <img
         alt=""
-        className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+        className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
         src={imgSlide1692}
       />
     </div>
@@ -53,7 +55,7 @@ function Slide1() {
 function Slide() {
   return (
     <div
-      className="bg-[#cb383e] h-[239px] overflow-clip relative shrink-0 w-[173px]"
+      className="bg-[#cb383e] h-[239px] overflow-clip relative shrink-0 w-full sm:w-[173px]"
       data-name="Slide 16:9 - 1"
     >
       <div className="absolute flex h-[119.327px] items-center justify-center left-[62.54px] top-[9.8px] w-[119.202px]">
@@ -152,7 +154,7 @@ function Frame43() {
 
 function Frame42() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px px-6 sm:px-0 relative">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center text-center sm:items-start sm:text-left min-w-px px-6 sm:px-0 relative">
       <Frame43 />
       <div
         className="bg-[#5a8b5c] h-[46px] relative rounded-[7px] shrink-0 w-full max-w-[218px] transition-all duration-200 cursor-pointer hover:brightness-95 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
@@ -197,7 +199,7 @@ function Slide3() {
 function Slide2() {
   return (
     <div
-      className="bg-[#cb383e] h-[239px] overflow-clip relative shrink-0 w-[173px]"
+      className="bg-[#cb383e] h-[239px] overflow-clip relative shrink-0 w-full sm:w-[173px]"
       data-name="Slide 16:9 - 1"
     >
       <div
@@ -292,7 +294,7 @@ function Frame46() {
 
 function Frame45() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px px-6 sm:px-0 relative">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-center text-center sm:items-start sm:text-left min-w-px px-6 sm:px-0 relative">
       <Frame46 />
       <div
         className="bg-[#5a8b5c] h-[46px] relative rounded-[7px] shrink-0 w-full max-w-[218px] transition-all duration-200 cursor-pointer hover:brightness-95 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"

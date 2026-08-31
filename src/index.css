@@ -32,7 +32,9 @@
 }
 
 .hero-marquee-track {
-  animation: hero-marquee 30s linear infinite;
+  /* one group is repeated 3x, so -50% covers 3 list-widths — scale the
+     duration to keep the same visual scroll speed as the old 30s/1x setup */
+  animation: hero-marquee 90s linear infinite;
   will-change: transform;
 }
 

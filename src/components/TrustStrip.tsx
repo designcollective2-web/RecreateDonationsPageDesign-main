@@ -17,7 +17,7 @@ const STATS: { value: string; label: string }[] = [
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div
-      className="content-stretch flex flex-col gap-[4px] items-center overflow-clip px-6 py-8 md:px-[48px] md:py-[32px] relative"
+      className="content-stretch flex flex-col gap-[4px] items-center overflow-clip px-2 py-3 md:px-[48px] md:py-[32px] relative"
       data-name="Frame"
     >
       <p className="font-['Montserrat:Medium',sans-serif] font-medium relative shrink-0 text-[26px] md:text-[32px]">
@@ -36,7 +36,7 @@ export default function TrustStrip() {
       className="bg-[#95b996] flex justify-center relative shrink-0 w-full"
       data-name="Trust Strip"
     >
-      <div className="[word-break:break-word] grid grid-cols-2 md:grid-cols-4 items-start leading-[normal] gap-x-4 md:gap-0 overflow-clip px-6 md:px-[50px] py-6 md:py-0 relative text-white w-full max-w-[1440px]">
+      <div className="[word-break:break-word] grid grid-cols-2 md:grid-cols-4 items-start leading-[normal] gap-x-1 gap-y-1 md:gap-0 overflow-clip px-4 md:px-[50px] py-3 md:py-0 relative text-white w-full max-w-[1440px]">
         {STATS.map((s) => (
           <Stat key={s.label} value={s.value} label={s.label} />
         ))}

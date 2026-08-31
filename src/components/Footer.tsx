@@ -1,7 +1,7 @@
 function Frame62() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[12px] items-start overflow-clip relative shrink-0 text-white"
+      className="content-stretch flex flex-col gap-[12px] items-center text-center sm:items-start sm:text-left overflow-clip relative shrink-0 text-white"
       data-name="Frame"
     >
       <p className="font-['Neucha:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[24px] tracking-[2px] uppercase">
@@ -20,7 +20,7 @@ function Frame62() {
 function Frame63() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[12px] items-start overflow-clip relative shrink-0"
+      className="content-stretch flex flex-col gap-[12px] items-center text-center sm:items-start sm:text-left overflow-clip relative shrink-0"
       data-name="Frame"
     >
       <p className="font-['Neucha:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#df575c] text-[18px] tracking-[2px] uppercase">
@@ -48,7 +48,7 @@ function Frame63() {
 function Frame64() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[12px] items-start overflow-clip relative shrink-0"
+      className="content-stretch flex flex-col gap-[12px] items-center text-center sm:items-start sm:text-left overflow-clip relative shrink-0"
       data-name="Frame"
     >
       <p className="font-['Neucha:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#df575c] text-[18px] tracking-[2px] uppercase">

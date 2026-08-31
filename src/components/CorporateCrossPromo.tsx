@@ -5,7 +5,7 @@ function Frame48() {
       data-name="Frame"
     >
       <div className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[16px] text-black tracking-[2.5px] uppercase w-[min-content] whitespace-pre-wrap">
-        <p className="leading-[normal] mb-0 text-[28px] text-white">
+        <p className="[text-wrap:balance] leading-[normal] mb-0 text-[28px] text-white">
           Join the companies already making a difference.
         </p>
         <p className="leading-[normal] mb-0 text-[28px]">​</p>
@@ -33,7 +33,7 @@ function Frame48() {
 function Frame51() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[161px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[161px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#1fd661] text-[18px] text-center whitespace-nowrap">
@@ -46,7 +46,7 @@ function Frame51() {
 function Frame52() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[160px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[160px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#e31221] text-[18px] text-center whitespace-nowrap">
@@ -59,7 +59,7 @@ function Frame52() {
 function Frame53() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[161px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[161px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#4f1270] text-[18px] text-center whitespace-nowrap">
@@ -72,7 +72,7 @@ function Frame53() {
 function Frame54() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[160px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[160px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#0061ff] text-[18px] text-center whitespace-nowrap">
@@ -85,7 +85,7 @@ function Frame54() {
 function Frame55() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[46px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[160px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[46px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[160px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#4f1270] text-[18px] text-center whitespace-nowrap">
@@ -98,7 +98,7 @@ function Frame55() {
 function Frame56() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[160px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[160px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#e31221] text-[18px] text-center whitespace-nowrap">
@@ -111,7 +111,7 @@ function Frame56() {
 function Frame57() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[161px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[161px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#1fd661] text-[18px] text-center whitespace-nowrap">
@@ -124,7 +124,7 @@ function Frame57() {
 function Frame58() {
   return (
     <div
-      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[159px]"
+      className="bg-[#f3f7f3] content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[159px]"
       data-name="Frame"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#0061ff] text-[18px] text-center whitespace-nowrap">
@@ -137,11 +137,11 @@ function Frame58() {
 function Frame59() {
   return (
     <div
-      className="border border-[#9dbf9e] border-solid content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-[160px]"
+      className="col-span-2 sm:col-span-1 border border-[#9dbf9e] border-solid content-stretch flex flex-col h-[54px] items-center justify-center overflow-clip px-4 sm:px-[48px] py-[22px] relative rounded-[7px] shrink-0 w-full sm:w-[160px]"
       data-name="Frame"
     >
-      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#f3f7f3] text-[15px] text-center uppercase whitespace-nowrap">
-        <p className="leading-[20px] mb-0 whitespace-pre">{`your `}</p>
+      <div className="[word-break:break-word] flex flex-row sm:flex-col gap-[6px] sm:gap-0 font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#f3f7f3] text-[15px] text-center uppercase whitespace-nowrap">
+        <p className="leading-[20px] mb-0 whitespace-pre">{`your`}</p>
         <p className="leading-[20px] whitespace-pre">company here</p>
       </div>
     </div>
@@ -151,7 +151,7 @@ function Frame59() {
 function PartnerGrid() {
   return (
     <div
-      className="flex flex-wrap gap-[14px] items-start justify-center relative shrink-0 w-full"
+      className="grid grid-cols-2 gap-[14px] w-full sm:flex sm:flex-wrap sm:items-start sm:justify-center relative shrink-0"
       data-name="Partner logos"
     >
       <Frame51 />
@@ -170,9 +170,10 @@ function PartnerGrid() {
 function PartnerPanel() {
   return (
     <div className="relative shrink-0 w-full max-w-[576px] pt-[14px]">
-      {/* inner width ≈ 518px (576 − 2×27 padding − 2×2 border) so the 160px
-          logo chips wrap 3-per-row on desktop, matching the original design */}
-      <div className="border-2 border-[#95b996] border-dashed content-stretch flex flex-col items-center px-[27px] py-[30px] rounded-[13px] w-full">
+      {/* desktop: inner width ≈ 518px (576 − 2×27 padding − 2×2 border) so the
+          160px logo chips wrap 3-per-row, matching the original design.
+          mobile: chips go full-width in a 2-col grid (see PartnerGrid). */}
+      <div className="border-2 border-[#95b996] border-dashed content-stretch flex flex-col items-center px-4 sm:px-[27px] py-[30px] rounded-[13px] w-full">
         <PartnerGrid />
       </div>
       <div className="-translate-x-1/2 absolute bg-[#5a8b5c] content-stretch flex items-center justify-center left-1/2 px-[12px] top-0">

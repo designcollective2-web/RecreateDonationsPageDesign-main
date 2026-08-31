@@ -31,7 +31,7 @@ function CampaignChart({
   const circumference = 2 * Math.PI * radius
   const dashOffset = circumference * (1 - Math.min(100, Math.max(0, v)) / 100)
   return (
-    <div ref={ref} className="relative shrink-0 size-[100px]">
+    <div ref={ref} className="relative shrink-0 size-[62px] sm:size-[100px]">
       <svg
         className="absolute inset-0 block size-full -rotate-90"
         viewBox="0 0 100 100"
@@ -49,7 +49,7 @@ function CampaignChart({
           strokeDashoffset={dashOffset}
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center font-['Montserrat:Medium',sans-serif] font-medium text-[16px] text-black tracking-[1.5px]">
+      <div className="absolute inset-0 flex items-center justify-center font-['Montserrat:Medium',sans-serif] font-medium text-[11px] sm:text-[16px] text-black tracking-[1px] sm:tracking-[1.5px]">
         <span>{Math.round(v)}%</span>
       </div>
     </div>
@@ -88,13 +88,13 @@ function CampaignCard({
 }) {
   return (
     <div className="bg-[#f3f7f3] content-stretch flex flex-1 flex-col gap-[24px] items-start min-w-px p-6 md:p-[40px] relative rounded-[5px] transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div className="content-stretch flex flex-col sm:flex-row gap-[24px] items-start sm:items-center relative shrink-0 w-full">
-        <div className="content-stretch flex flex-col gap-[20px] items-start shrink-0">
-          <div className="flex h-[42px] items-center">{logo}</div>
+      <div className="content-stretch flex flex-col gap-[16px] sm:flex-row sm:gap-[24px] sm:items-center relative shrink-0 w-full">
+        <div className="content-stretch flex flex-row items-center justify-between w-full gap-3 sm:w-auto sm:flex-col sm:items-start sm:justify-start sm:gap-[20px] shrink-0">
+          <div className="flex h-[42px] items-center shrink-0">{logo}</div>
           <CampaignChart percent={percent} delay={chartDelay} />
         </div>
         <div className="[word-break:break-word] content-stretch flex flex-1 flex-col gap-[12px] items-start justify-center min-w-px relative">
-          <p className="font-['Neucha:Regular',sans-serif] leading-[36px] not-italic relative shrink-0 text-[24px] text-black tracking-[2px] uppercase w-full">
+          <p className="[text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[36px] not-italic relative shrink-0 text-[24px] text-black tracking-[2px] uppercase w-full">
             {title}
           </p>
           <p className="font-['Montserrat:Medium',sans-serif] font-medium leading-[28px] relative shrink-0 text-[#555] text-[14px] tracking-[1.5px] w-full">
@@ -162,7 +162,7 @@ export default function ActiveCampaigns() {
       data-name="Active Campaigns"
     >
       <div className="[word-break:break-word] content-stretch flex flex-col gap-[24px] items-center max-w-[856px] relative shrink-0 text-center w-full">
-        <p className="font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-black tracking-[2.5px] uppercase w-full">
+        <p className="[text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-black tracking-[2.5px] uppercase w-full">
           Active campaigns
         </p>
         <p className="font-['Montserrat:Medium',sans-serif] font-medium leading-[28px] relative shrink-0 text-[#555] text-[14px] tracking-[1.5px] w-full">

@@ -38,7 +38,7 @@ function Frame32() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-center justify-center relative shrink-0">
       <Frame33 />
-      <p className="[word-break:break-word] font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-center text-white tracking-[2.5px] uppercase">
+      <p className="[word-break:break-word] [text-wrap:balance] font-['Neucha:Regular',sans-serif] leading-[37px] not-italic relative shrink-0 text-[28px] text-center text-white tracking-[2.5px] uppercase">
         Prefer a direct bank transfer?
       </p>
     </div>
@@ -71,17 +71,19 @@ function CopyRow({ label, value }: { label: string; value: string }) {
       type="button"
       onClick={copy}
       aria-label={`Copy ${label}`}
-      className="bg-[#e95158] content-stretch flex flex-col sm:flex-row gap-2 sm:gap-[16px] items-start sm:items-center overflow-clip p-4 md:p-[24px] relative rounded-[5px] shrink-0 w-full text-left transition-all duration-200 cursor-pointer hover:brightness-105 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-inset"
+      className="bg-[#e95158] content-stretch flex flex-row gap-[12px] sm:gap-[16px] items-start overflow-clip p-4 md:p-[24px] relative rounded-[5px] shrink-0 w-full text-left transition-all duration-200 cursor-pointer hover:brightness-105 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-inset"
       data-name="Frame"
     >
-      <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#eaf1ea] text-[16px] tracking-[1.5px] whitespace-nowrap">
-        {label}
-      </p>
-      <p className="[word-break:break-word] break-all flex-1 font-['Montserrat:Bold',sans-serif] font-bold leading-[normal] min-w-px relative text-[16px] text-left sm:text-right text-white w-full">
-        {value}
-      </p>
+      <div className="flex flex-1 min-w-0 flex-col gap-[2px] sm:flex-row sm:items-baseline sm:justify-between sm:gap-[16px]">
+        <p className="[word-break:break-word] font-['Montserrat:Medium',sans-serif] font-medium leading-[1.5] relative shrink-0 text-[#eaf1ea] text-[16px] tracking-[1.5px] whitespace-nowrap">
+          {label}
+        </p>
+        <p className="[word-break:break-word] break-words font-['Montserrat:Bold',sans-serif] font-bold leading-[1.4] min-w-0 relative text-[16px] text-left sm:text-right text-white">
+          {value}
+        </p>
+      </div>
       <div
-        className="opacity-50 overflow-clip relative shrink-0 size-[24px]"
+        className="opacity-50 overflow-clip relative shrink-0 mt-[2px] size-[24px]"
         data-name="Copy"
       >
         <div className="absolute inset-[8.33%]" data-name="Icon">
